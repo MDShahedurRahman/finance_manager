@@ -22,3 +22,16 @@ def load_transactions(self):
 def save_transactions(self):
     with open(TRANSACTIONS_FILE, "w") as f:
         json.dump([txn.__dict__ for txn in self.transactions], f, indent=2)
+
+
+def add_transaction(self, transaction):
+    account = self.account_controller.get_account(transaction.account_id)
+    if not account:
+        raise ValueError("Account not found")
+    if transaction.category.type == "income":
+        account.deposit(transaction.amount)
+    else:
+        account.withdraw(transaction.amount)
+    self.transactions.append(transaction)
+    self.save_transactions()
+    self.account_controller.save_accounts()
