@@ -25,4 +25,7 @@ def main():
     cat_expense = Category("Groceries", "expense")
     txn1 = Transaction("txn1", "acc1", cat_income, 2000,
                        description="Monthly Salary")
+    txn2 = Transaction("txn2", "acc1", cat_expense, 150,
+                       description="Grocery shopping")
     txn_ctrl.add_transaction(txn1)
+    txn_ctrl.add_transaction(txn2)
