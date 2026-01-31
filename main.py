@@ -37,3 +37,7 @@ def main():
     expense = report_ctrl.total_expense()
     balance_cat = report_ctrl.balance_by_category()
     report_view.display_summary(income, expense, balance_cat)
+
+
+if __name__ == "__main__":
+    main()
