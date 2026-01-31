@@ -31,3 +31,4 @@ def main():
     txn_ctrl.add_transaction(txn2)
 
     main_view.show_accounts(account_ctrl.accounts)
+    main_view.show_transactions(txn_ctrl.transactions)
