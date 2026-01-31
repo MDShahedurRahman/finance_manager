@@ -15,3 +15,8 @@ def load_accounts(self):
             return [Account(**acc) for acc in data]
     except FileNotFoundError:
         return []
+
+
+def save_accounts(self):
+    with open(ACCOUNTS_FILE, "w") as f:
+        json.dump([acc.__dict__ for acc in self.accounts], f, indent=2)
