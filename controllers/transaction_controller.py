@@ -17,3 +17,8 @@ def load_transactions(self):
             return [Transaction(**txn) for txn in data]
     except FileNotFoundError:
         return []
+
+
+def save_transactions(self):
+    with open(TRANSACTIONS_FILE, "w") as f:
+        json.dump([txn.__dict__ for txn in self.transactions], f, indent=2)
