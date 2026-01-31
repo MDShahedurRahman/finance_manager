@@ -5,10 +5,14 @@ class ReportController:
     def __init__(self, transaction_controller):
         self.txn_ctrl = transaction_controller
 
+    def total_income(self):
+        return sum(txn.amount for txn in self.txn_ctrl.transactions if txn.category.type == "income")
 
-def total_income(self):
-    return sum(txn.amount for txn in self.txn_ctrl.transactions if txn.category.type == "income")
+    def total_expense(self):
+        return sum(txn.amount for txn in self.txn_ctrl.transactions if txn.category.type == "expense")
 
-
-def total_expense(self):
-    return sum(txn.amount for txn in self.txn_ctrl.transactions if txn.category.type == "expense")
+    def balance_by_category(self):
+        report = defaultdict(float)
+        for txn in self.txn_ctrl.transactions:
+            report[txn.category.name] += txn.amount if txn.category.type == "income" else -txn.amount
+        return report
