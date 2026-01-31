@@ -20,3 +20,9 @@ def main():
     acc2 = Account("acc2", "Savings", 5000)
     account_ctrl.add_account(acc1)
     account_ctrl.add_account(acc2)
+
+    cat_income = Category("Salary", "income")
+    cat_expense = Category("Groceries", "expense")
+    txn1 = Transaction("txn1", "acc1", cat_income, 2000,
+                       description="Monthly Salary")
+    txn_ctrl.add_transaction(txn1)
