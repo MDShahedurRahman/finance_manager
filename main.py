@@ -32,3 +32,8 @@ def main():
 
     main_view.show_accounts(account_ctrl.accounts)
     main_view.show_transactions(txn_ctrl.transactions)
+
+    income = report_ctrl.total_income()
+    expense = report_ctrl.total_expense()
+    balance_cat = report_ctrl.balance_by_category()
+    report_view.display_summary(income, expense, balance_cat)
