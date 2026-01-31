@@ -20,3 +20,8 @@ def load_accounts(self):
 def save_accounts(self):
     with open(ACCOUNTS_FILE, "w") as f:
         json.dump([acc.__dict__ for acc in self.accounts], f, indent=2)
+
+
+def add_account(self, account):
+    self.accounts.append(account)
+    self.save_accounts()
