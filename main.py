@@ -29,3 +29,5 @@ def main():
                        description="Grocery shopping")
     txn_ctrl.add_transaction(txn1)
     txn_ctrl.add_transaction(txn2)
+
+    main_view.show_accounts(account_ctrl.accounts)
