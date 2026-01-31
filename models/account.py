@@ -3,3 +3,6 @@ class Account:
         self.account_id = account_id
         self.name = name
         self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
