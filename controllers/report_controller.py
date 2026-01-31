@@ -8,3 +8,7 @@ class ReportController:
 
 def total_income(self):
     return sum(txn.amount for txn in self.txn_ctrl.transactions if txn.category.type == "income")
+
+
+def total_expense(self):
+    return sum(txn.amount for txn in self.txn_ctrl.transactions if txn.category.type == "expense")
