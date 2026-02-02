@@ -22,3 +22,22 @@ This project is designed as a **portfolio-ready backend project**, demonstrating
 - CLI-friendly and easy to extend
 
 ---
+
+## 🧠 Why This Project
+
+This project is intentionally more advanced than a basic CRUD tracker.  
+It demonstrates:
+
+- Real-world domain modeling
+- Business logic inside controllers
+- Separation of concerns using MVC
+- Incremental development (50+ logical commits)
+- File-based persistence similar to backend services
+
+Perfect for:
+- Python backend portfolios
+- Interview discussion projects
+- Git commit practice
+- MVC architecture demonstration
+
+---
