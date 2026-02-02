@@ -16,3 +16,11 @@ class ReportController:
         for txn in self.txn_ctrl.transactions:
             report[txn.category.name] += txn.amount if txn.category.type == "income" else -txn.amount
         return report
+
+    def expense_by_category(self):
+        report = {}
+        for txn in self.txn_ctrl.transactions:
+            if txn.category.type == "expense":
+                report[txn.category.name] = report.get(
+                    txn.category.name, 0) + txn.amount
+        return report
