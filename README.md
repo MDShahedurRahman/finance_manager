@@ -41,3 +41,28 @@ Perfect for:
 - MVC architecture demonstration
 
 ---
+
+## 🗂 Project Structure
+
+```
+finance_manager/
+├── main.py
+├── config.py
+├── models/
+│   ├── account.py
+│   ├── transaction.py
+│   └── category.py
+├── controllers/
+│   ├── account_controller.py
+│   ├── transaction_controller.py
+│   └── report_controller.py
+├── views/
+│   ├── main_view.py
+│   └── report_view.py
+└── data/
+    ├── accounts.json
+    ├── transactions.json
+    └── categories.json
+```
+
+---
