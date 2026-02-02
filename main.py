@@ -48,6 +48,9 @@ def main():
 
     main_view.show_balance(account_ctrl.accounts)
 
+    net = report_ctrl.net_balance()
+    report_view.display_net_balance(net)
+
 
 if __name__ == "__main__":
     main()
