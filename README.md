@@ -129,3 +129,11 @@ Net Balance: 1150
 ```
 
 ---
+
+## 🧪 Data Persistence
+
+- Data is stored in JSON files under the `data/` directory
+- Files are automatically created on first run
+- No database setup required
+
+---
