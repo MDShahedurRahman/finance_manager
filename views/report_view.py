@@ -10,3 +10,8 @@ class ReportView:
         print("Income by Category:")
         for cat, amt in report.items():
             print(f"{cat}: {amt}")
+
+    def display_expense_by_category(self, report):
+        print("Expense by Category:")
+        for cat, amt in report.items():
+            print(f"{cat}: {amt}")
