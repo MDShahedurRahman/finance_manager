@@ -32,3 +32,6 @@ class ReportController:
                 report[txn.category.name] = report.get(
                     txn.category.name, 0) + txn.amount
         return report
+
+    def net_balance(self):
+        return self.total_income() - self.total_expense()
