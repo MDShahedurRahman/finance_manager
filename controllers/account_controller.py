@@ -28,3 +28,8 @@ class AccountController:
             if acc.account_id == account_id:
                 return acc
         return None
+
+    def delete_account(self, account_id):
+        self.accounts = [
+            acc for acc in self.accounts if acc.account_id != account_id]
+        self.save_accounts()
