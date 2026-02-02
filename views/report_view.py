@@ -15,3 +15,6 @@ class ReportView:
         print("Expense by Category:")
         for cat, amt in report.items():
             print(f"{cat}: {amt}")
+
+    def display_net_balance(self, balance):
+        print(f"Net Balance: {balance}")
