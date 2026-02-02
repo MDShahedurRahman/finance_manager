@@ -66,3 +66,27 @@ finance_manager/
 ```
 
 ---
+
+## 🧩 Architecture (MVC)
+
+### Model
+- `Account`
+- `Transaction`
+- `Category`
+
+Handles data structures and business entities.
+
+### View
+- `MainView`
+- `ReportView`
+
+Responsible for displaying information to the CLI.
+
+### Controller
+- `AccountController`
+- `TransactionController`
+- `ReportController`
+
+Contains business logic, validation, and persistence handling.
+
+---
