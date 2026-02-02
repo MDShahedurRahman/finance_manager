@@ -111,3 +111,21 @@ The app will:
 - Generate summary reports
 
 ---
+
+## 📊 Sample Output
+
+```
+Accounts:
+acc1: Checking - Balance: 2850
+acc2: Savings - Balance: 4300
+
+Transactions:
+txn1 | Salary | 2000 | Monthly Salary
+txn2 | Groceries | 150 | Grocery shopping
+
+Total Income: 2500
+Total Expense: 1350
+Net Balance: 1150
+```
+
+---
