@@ -69,3 +69,6 @@ class TransactionController:
         if txn:
             txn.category = new_category
             self.save_transactions()
+
+    def transactions_by_category(self, category_name):
+        return [txn for txn in self.transactions if txn.category.name == category_name]
