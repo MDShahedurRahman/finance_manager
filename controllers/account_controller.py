@@ -33,3 +33,9 @@ class AccountController:
         self.accounts = [
             acc for acc in self.accounts if acc.account_id != account_id]
         self.save_accounts()
+
+    def update_account_name(self, account_id, new_name):
+        acc = self.get_account(account_id)
+        if acc:
+            acc.name = new_name
+            self.save_accounts()
