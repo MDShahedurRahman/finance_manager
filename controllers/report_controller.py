@@ -24,3 +24,11 @@ class ReportController:
                 report[txn.category.name] = report.get(
                     txn.category.name, 0) + txn.amount
         return report
+
+    def income_by_category(self):
+        report = {}
+        for txn in self.txn_ctrl.transactions:
+            if txn.category.type == "income":
+                report[txn.category.name] = report.get(
+                    txn.category.name, 0) + txn.amount
+        return report
