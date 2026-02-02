@@ -90,3 +90,24 @@ Responsible for displaying information to the CLI.
 Contains business logic, validation, and persistence handling.
 
 ---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.9+
+- No external libraries required
+
+### Run the Application
+
+```bash
+python main.py
+```
+
+The app will:
+- Create sample accounts
+- Add income and expense transactions
+- Display account balances
+- Generate summary reports
+
+---
