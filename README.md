@@ -148,3 +148,14 @@ Net Balance: 1150
 - Unit tests using `pytest`
 
 ---
+
+## 👤 Author
+
+Md Shahedur Rahman  
+Python | Java | Backend Development | MVC Architecture
+
+---
+
+## 📄 License
+
+This project is open-source and free to use for learning and portfolio purposes.
