@@ -137,3 +137,14 @@ Net Balance: 1150
 - No database setup required
 
 ---
+
+## 🔧 Possible Enhancements
+
+- Add budget limits per category
+- Monthly or yearly reports
+- CSV export
+- Authentication layer
+- Replace JSON with SQLite or PostgreSQL
+- Unit tests using `pytest`
+
+---
