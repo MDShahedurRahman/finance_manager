@@ -9,3 +9,8 @@ class MainView:
         for txn in transactions:
             print(
                 f"{txn.txn_id}: {txn.account_id} | {txn.category.name} | {txn.amount} | {txn.date} | {txn.description}")
+
+    def show_balance(self, accounts):
+        print("Account Balances:")
+        for acc in accounts:
+            print(f"{acc.name}: {acc.balance}")
