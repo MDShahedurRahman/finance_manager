@@ -37,3 +37,15 @@ class TransactionController:
         if account_id:
             return [txn for txn in self.transactions if txn.account_id == account_id]
         return self.transactions
+
+    def delete_transaction(self, txn_id):
+        txn = next((t for t in self.transactions if t.txn_id == txn_id), None)
+        if txn:
+            account = self.account_controller.get_account(txn.account_id)
+            if txn.category.type == "income":
+                account.withdraw(txn.amount)
+            else:
+                account.deposit(txn.amount)
+            self.transactions.remove(txn)
+            self.save_transactions()
+            self.account_controller.save_accounts()
