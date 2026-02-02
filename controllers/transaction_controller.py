@@ -49,3 +49,17 @@ class TransactionController:
             self.transactions.remove(txn)
             self.save_transactions()
             self.account_controller.save_accounts()
+
+    def update_transaction_amount(self, txn_id, new_amount):
+        txn = next((t for t in self.transactions if t.txn_id == txn_id), None)
+        if txn:
+            account = self.account_controller.get_account(txn.account_id)
+            if txn.category.type == "income":
+                account.balance -= txn.amount
+                account.balance += new_amount
+            else:
+                account.balance += txn.amount
+                account.balance -= new_amount
+            txn.amount = new_amount
+            self.save_transactions()
+            self.account_controller.save_accounts()
