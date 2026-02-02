@@ -5,3 +5,6 @@ class Category:
 
     def is_income(self):
         return self.type == "income"
+
+    def is_expense(self):
+        return self.type == "expense"
