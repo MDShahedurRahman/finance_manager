@@ -43,6 +43,9 @@ def main():
                        1200, description="Monthly Rent")
     txn_ctrl.add_transaction(txn3)
 
+    txn4 = Transaction("txn4", "acc2", cat_income, 500, description="Bonus")
+    txn_ctrl.add_transaction(txn4)
+
 
 if __name__ == "__main__":
     main()
