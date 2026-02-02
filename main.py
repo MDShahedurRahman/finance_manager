@@ -38,6 +38,11 @@ def main():
     balance_cat = report_ctrl.balance_by_category()
     report_view.display_summary(income, expense, balance_cat)
 
+    cat_expense2 = Category("Rent", "expense")
+    txn3 = Transaction("txn3", "acc2", cat_expense2,
+                       1200, description="Monthly Rent")
+    txn_ctrl.add_transaction(txn3)
+
 
 if __name__ == "__main__":
     main()
