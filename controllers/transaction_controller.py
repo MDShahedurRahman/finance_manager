@@ -63,3 +63,9 @@ class TransactionController:
             txn.amount = new_amount
             self.save_transactions()
             self.account_controller.save_accounts()
+
+    def update_transaction_category(self, txn_id, new_category):
+        txn = next((t for t in self.transactions if t.txn_id == txn_id), None)
+        if txn:
+            txn.category = new_category
+            self.save_transactions()
