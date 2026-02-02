@@ -46,6 +46,8 @@ def main():
     txn4 = Transaction("txn4", "acc2", cat_income, 500, description="Bonus")
     txn_ctrl.add_transaction(txn4)
 
+    main_view.show_balance(account_ctrl.accounts)
+
 
 if __name__ == "__main__":
     main()
